@@ -61,12 +61,16 @@ export default function PropertyCard({
           </span>
         </div>
 
-        {/* Heart - Now Filled Orange when clicked (optional toggle) */}
-        <div
-          className="absolute top-4 right-4 flex items-center justify-center w-12 h-12 bg-white/95 rounded-full shadow-xl hover:scale-110 transition-all border-2 border-white/40 backdrop-blur-md cursor-pointer"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <Heart className="w-6 h-6 text-orange-500 fill-orange-500" />
+        {/* Heart  */}
+        <div className='bg-orange-400'>
+          <div
+            className="absolute top-4 right-4 flex items-center justify-center w-12 h-12 bg-white/95 rounded-full shadow-xl hover:scale-110 transition-all border-2 border-white/40 backdrop-blur-md cursor-pointer"
+          >
+            <div className=" backdrop-blur-lg rounded-full p-2 shadow-lg">              <div className='bg-gray-100 rounded-full p-3'>
+              <Heart className="w-6 h-6 text-orange-500 fill-orange-500" />
+            </div>
+            </div>
+          </div>
         </div>
 
         {/* Photo Count - Moved to Bottom Right */}
@@ -132,8 +136,7 @@ export default function PropertyCard({
 
           <button className="flex items-center gap-2 px-6 py-3 bg-gray-200 text-black  rounded-full font-bold hover:bg-orange-100 transition">
             VIEW DETAILS
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="orange" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6" /></svg>
-          </button>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"    className="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>          </button>
 
         </div>
       </div>

@@ -3,6 +3,9 @@ import React from 'react';
 import Footer from './components/section/Footer';
 import PropertyCard from './components/card/PropertyCard';
 import './globals.css'
+import TestimonialCard from './components/card/TestimonialCard';
+import InterestingPlaceCard from './components/card/InterestingPlaceCard';
+import { Headphones, Users, Smartphone } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -12,7 +15,7 @@ export default function Home() {
 
 
         {/* Single Card – Perfectly Centered */}
-        <div className="max-w-xl mx-auto">
+        <div className="max-w-xl mx-auto flex flex-col gap-10">
           <PropertyCard
             imageUrl="https://plus.unsplash.com/premium_photo-1706140675031-1e0548986ad1?q=80&w=1632&auto=format&fit=crop"
             title="Modern Apartment in Downtown"
@@ -26,6 +29,46 @@ export default function Home() {
             authorAvatar="https://i.pravatar.cc/150?img=5"
             isForSale={false}
           />
+          <TestimonialCard
+            number={1}
+            name="Centa Simpson"
+            avatarUrl="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+            quote="Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan..."
+            timestamp={Date.now()}
+          />
+          <InterestingPlaceCard
+            number={3}
+            title="Find Interesting Place"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget scelerisque metus. Vestibulum accumsan, elit."
+            icon="building"
+          />
+          {/* <WhyChooseSection
+            title="Why Choose Our Properties"
+            subtitle="Check video presentation to find out more about us."
+            imageUrl="https://images.unsplash.com/photo-1605146769289-440113cc3d00"
+            features={[
+              {
+                icon: <Headphones className="w-7 h-7 text-orange-500" />,
+                title: "24 Hours Support",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              },
+              {
+                icon: <Users className="w-7 h-7 text-orange-500" />,
+                title: "User Admin Panel",
+                description: "Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Curabitur convallis fringilla diam sed aliquam."
+              },
+              {
+                icon: <Smartphone className="w-7 h-7 text-orange-500" />,
+                title: "Mobile Friendly",
+                description: "Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa."
+              }
+            ]}
+            testimonial={{
+              quote: "Your website is fully responsive so visitors can view your content from their choice of device.",
+              author: "Mark Antony",
+              role: "Renstate CEO"
+            }}
+          /> */}
         </div>
       </main>
 
@@ -46,10 +89,10 @@ export default function Home() {
 
         socialLinks={[
           { type: 'facebook' as const, href: 'https://facebook.com' },
-          { type: 'twitter' as const,   href: 'https://x.com' },
+          { type: 'twitter' as const, href: 'https://x.com' },
           { type: 'instagram' as const, href: 'https://instagram.com' },
-          { type: 'youtube' as const,   href: 'https://youtube.com' },
-          { type: 'tiktok' as const,    href: 'https://tiktok.com' },
+          { type: 'youtube' as const, href: 'https://youtube.com' },
+          { type: 'tiktok' as const, href: 'https://tiktok.com' },
         ]}
 
         copyrightText="© RENSTATE 2025. ALL RIGHTS RESERVED."
