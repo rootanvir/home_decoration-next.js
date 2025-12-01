@@ -6,6 +6,7 @@ import './globals.css'
 import TestimonialCard from './components/card/TestimonialCard';
 import InterestingPlaceCard from './components/card/InterestingPlaceCard';
 import { Headphones, Users, Smartphone } from 'lucide-react';
+import WhyChooseSection from './components/section/WhyChooseSection';
 
 export default function Home() {
   return (
@@ -42,10 +43,13 @@ export default function Home() {
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget scelerisque metus. Vestibulum accumsan, elit."
             icon="building"
           />
-          {/* <WhyChooseSection
+          
+        </div>
+        <div>
+          <WhyChooseSection
             title="Why Choose Our Properties"
             subtitle="Check video presentation to find out more about us."
-            imageUrl="https://images.unsplash.com/photo-1605146769289-440113cc3d00"
+            imageUrl="https://plus.unsplash.com/premium_photo-1670360414946-e33a828d1d52?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             features={[
               {
                 icon: <Headphones className="w-7 h-7 text-orange-500" />,
@@ -68,7 +72,7 @@ export default function Home() {
               author: "Mark Antony",
               role: "Renstate CEO"
             }}
-          /> */}
+          />
         </div>
       </main>
 
