@@ -74,15 +74,15 @@ export default function WhyChooseSection({
                         </div>
 
                         {/* Testimonial — Your perfect translate + white border + custom corners */}
-                        <div className="absolute bottom-25 left-38 translate-y-1/2 translate-x-[-30%] lg:translate-x-[-55%] lg:translate-y-[32%] xl:translate-x-[-38%] xl:translate-y-[40%] ">
+                        <div className="absolute bottom-25 left-38 translate-y-1/2 translate-x-[-30%] lg:translate-x-[-55%] lg:translate-y-[32%] xl:translate-x-[-38%] xl:translate-y-[45%] ">
 
                             {/* White outer border (makes it float cleanly) */}
-                            <div className="p-4  bg-white rounded-tr-4xl  ">
+                            <div className="p-4 bg-white rounded-tr-4xl  ">
 
                                 {/* Inner dark card — only top-right & bottom-left rounded */}
-                                <div className="p-4 bg-white rounded-[40px] shadow-2xl">
-                                    <div className="relative bg-black/95 rounded-[40px] rounded-tl-none rounded-br-none p-8 border border-white/20 overflow-hidden">
-                                        <blockquote className="text-white text-lg italic leading-relaxed mb-6 pr-12">
+                                <div className="p-1 bg-white rounded-[40px]  ">
+                                    <div className="relative bg-black/95 rounded-[40px] rounded-tl-none rounded-br-none p-10 border border-white/20 overflow-hidden">
+                                        <blockquote className="text-white text-lg italic leading-relaxed  ">
                                             "{testimonial.quote}"
                                         </blockquote>
                                         <div className="pr-12">
