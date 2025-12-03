@@ -7,6 +7,10 @@ import TestimonialCard from './components/card/TestimonialCard';
 import InterestingPlaceCard from './components/card/InterestingPlaceCard';
 import { Headphones, Users, Smartphone } from 'lucide-react';
 import WhyChooseSection from './components/section/WhyChooseSection';
+import AppPromoSection from './components/section/AppPromoSection';
+import AppLaunchSection from './components/section/AppPromoSection';
+import CitiesShowcase from './components/section/CitiesShowcase';
+import TrustedPartners from './components/section/TrustedPartners';
 
 export default function Home() {
   return (
@@ -43,9 +47,11 @@ export default function Home() {
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget scelerisque metus. Vestibulum accumsan, elit."
             icon="building"
           />
+
+          
           
         </div>
-        <div>
+        <div className='mt-10 flex flex-col gap-10'>
           <WhyChooseSection
             title="Why Choose Our Properties"
             subtitle="Check video presentation to find out more about us."
@@ -73,6 +79,12 @@ export default function Home() {
               role: "Renstate CEO"
             }}
           />
+
+          <AppLaunchSection />
+
+          <CitiesShowcase />
+
+          <TrustedPartners />
         </div>
       </main>
 
