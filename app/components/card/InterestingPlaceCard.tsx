@@ -1,69 +1,71 @@
 'use client';
 
-import { Home, Building2 } from 'lucide-react';
+import { Home, Building2, MessageCircle, PlusCircle } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
+
+const iconMap: Record<string, LucideIcon> = {
+  home: Home,
+  building: Building2,
+  'message-circle': MessageCircle,
+  'plus-circle': PlusCircle,
+};
 
 interface InterestingPlaceCardProps {
-  number: string | number;        // e.g. "01", "02", 1, 2...
+  number: string | number;
   title: string;
-  description: string | string[]; // Accept string or array of lines
-  icon?: 'home' | 'building' | 'both'; // Optional icon control
+  description: string | string[];
+  icon?: string;
 }
 
 export default function InterestingPlaceCard({
   number = "01",
   title = "Find Interesting Place",
-  description = "Proin dapibus nisl ornare diam varius tempus.\nAenean a quam luctus, finibus tellus ut, convallis eros sollicitudin turpis.",
-  icon = 'both'
+  description = "Short description here.",
+  icon = "home"
 }: InterestingPlaceCardProps) {
 
-  // Convert description to array of lines
-  const descLines = Array.isArray(description) 
-    ? description 
-    : description.split('\n').map(line => line.trim()).filter(Boolean);
+  const descLines = Array.isArray(description)
+    ? description
+    : description.split('\n').map(l => l.trim()).filter(Boolean);
+
+  const IconComponent = iconMap[icon] || Home;
 
   return (
-    <div className="relative w-full max-w-md mx-auto group">
-      {/* Main Card */}
-      <div className="bg-black rounded-3xl p-8 shadow-2xl border border-gray-800/60 transition-all duration-300 hover:border-orange-500/30 hover:shadow-orange-500/10">
-        
-        {/* Top Row: Number + Icon */}
-        <div className="flex items-center justify-between mb-10">
-          {/* Dynamic Number Badge */}
-          <div className="bg-gray-900/90 backdrop-blur-sm rounded-xl px-3 py-2 border border-gray-700/60 shadow-inner">
-            <span className="text-white font-black text-xl tracking-wider">
+    /* PERFECT SQUARE + NO OVERFLOW */
+    <div className="relative w-full aspect-square group">
+
+      <div className="absolute inset-0 bg-black rounded-3xl p-5 lg:p-6 shadow-xl border border-gray-800/60 
+                      transition-all duration-300 hover:border-orange-500/30 hover:shadow-orange-500/20
+                      flex flex-col justify-between">
+
+        {/* Top Row */}
+        <div className="flex items-center justify-between">
+          <div className="bg-gray-900/90 backdrop-blur-sm rounded-xl px-3 py-1.5 border border-gray-700/60">
+            <span className="text-white font-black text-lg tracking-wider">
               {String(number).padStart(2, '0')}.
             </span>
           </div>
-
-          {/* Dynamic Icon */}
-          <div className="relative w-14 h-14">
-            {icon === 'home' || icon === 'both' ? (
-              <Home className="w-14 h-14 text-orange-500 absolute top-0 left-0 opacity-80" />
-            ) : null}
-            {icon === 'building' || icon === 'both' ? (
-              <Building2 className="w-12 h-12 text-orange-500 absolute top-2 right-0 drop-shadow-lg" />
-            ) : null}
-          </div>
+          <IconComponent className="w-11 h-11 text-orange-500" strokeWidth={1.8} />
         </div>
 
-        {/* Dynamic Title */}
-        <h2 className="text-2xl font-bold text-white mb-5 leading-tight">
+        {/* Title - clamped to 2 lines */}
+        <h3 className="text-lg lg:text-xl font-bold text-white mt-4 line-clamp-2">
           {title}
-        </h2>
+        </h3>
 
-        {/* Dynamic Description */}
-        <div className="space-y-2">
-          {descLines.map((line, i) => (
-            <p key={i} className="text-gray-400 text-base leading-relaxed">
+        {/* Description - max 3 short lines, no overflow */}
+        <div className="mt-3 space-y-1">
+          {descLines.slice(0, 3).map((line, i) => (
+            <p key={i} className="text-gray-400 text-xs lg:text-sm leading-tight line-clamp-1">
               {line}
             </p>
           ))}
         </div>
       </div>
 
-      {/* Subtle orange glow on hover */}
-      <div className="absolute inset-0 -z-10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-orange-500/20 rounded-full"></div>
+      {/* Hover glow */}
+      <div className="absolute inset-0 -z-10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="absolute top-8 left-8 w-48 h-48 bg-orange-500/20 rounded-full"></div>
       </div>
     </div>
   );

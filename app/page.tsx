@@ -11,6 +11,9 @@ import AppPromoSection from './components/section/AppPromoSection';
 import AppLaunchSection from './components/section/AppPromoSection';
 import CitiesShowcase from './components/section/CitiesShowcase';
 import TrustedPartners from './components/section/TrustedPartners';
+import HotPropertiesSection from './components/section/HotPropertiesSection';
+import HowItWorksSection from './components/section/HowItWorksSection';
+import TestimonialsSection from './components/section/TestimonialsSection';
 
 export default function Home() {
   return (
@@ -19,37 +22,15 @@ export default function Home() {
       <main className="flex-1 container mx-auto px-6 py-16">
 
 
+        <div>
+          <HotPropertiesSection />
+        </div>
+
+
         {/* Single Card – Perfectly Centered */}
         <div className="max-w-xl mx-auto flex flex-col gap-10">
-          <PropertyCard
-            imageUrl="https://plus.unsplash.com/premium_photo-1706140675031-1e0548986ad1?q=80&w=1632&auto=format&fit=crop"
-            title="Modern Apartment in Downtown"
-            price={3200}
-            address="123 Main St, New York, NY"
-            beds={2}
-            baths={2}
-            sqft={1200}
-            photosCount={18}
-            authorName="Sarah Johnson"
-            authorAvatar="https://i.pravatar.cc/150?img=5"
-            isForSale={false}
-          />
-          <TestimonialCard
-            number={1}
-            name="Centa Simpson"
-            avatarUrl="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
-            quote="Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan..."
-            timestamp={Date.now()}
-          />
-          <InterestingPlaceCard
-            number={3}
-            title="Find Interesting Place"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget scelerisque metus. Vestibulum accumsan, elit."
-            icon="building"
-          />
+        
 
-          
-          
         </div>
         <div className='mt-10 flex flex-col gap-10'>
           <WhyChooseSection
@@ -82,9 +63,28 @@ export default function Home() {
 
           <AppLaunchSection />
 
-          <CitiesShowcase />
+          <CitiesShowcase
+            cities={[
+              {
+                properties: 26,
+                title: 'Explore NewYork',
+                description: 'Constant care and attention to the patients makes good record',
+              },
+              {
+                properties: 15,
+                title: 'Awesome Rome',
+                description: 'Constant care and attention to the patients makes good record',
+              },
+            ]}
+          />
 
           <TrustedPartners />
+        </div>
+        <div>
+          <HowItWorksSection />
+        </div>
+        <div>
+           <TestimonialsSection />
         </div>
       </main>
 

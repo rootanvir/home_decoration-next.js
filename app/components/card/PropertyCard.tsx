@@ -103,7 +103,7 @@ export default function PropertyCard({
               <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-sm">
                 <Bed className="w-5 h-5 text-orange-500" />
               </div>
-              <span className="text-lg font-semibold text-gray-800">{beds}</span>
+              <span className="text-lg font-semibold text-gray-800 pr-2">{beds}</span>
             </div>
 
             {/* Baths */}
@@ -111,7 +111,7 @@ export default function PropertyCard({
               <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-sm">
                 <Bath className="w-5 h-5 text-orange-500" />
               </div>
-              <span className="text-lg font-semibold text-gray-800">{baths}</span>
+              <span className="text-lg font-semibold text-gray-800  pr-2">{baths}</span>
             </div>
 
             {/* Sqft */}
@@ -119,7 +119,7 @@ export default function PropertyCard({
               <div className="flex items-center justify-center w-12 h-10 bg-white rounded-full shadow-sm">
                 <Square className="w-5 h-5 text-orange-500" />
               </div>
-              <span className="text-lg font-semibold text-gray-800">
+              <span className="text-lg font-semibold text-gray-800 ">
                 {sqft.toLocaleString()}
                 <span className="text-sm font-normal"> ft²</span>
               </span>
