@@ -71,7 +71,7 @@ const TrustedPartners = ({ items }: Props) => {
             {canScrollLeft && (
               <button
                 onClick={() => scroll("left")}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-20 
+                className="cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 z-20 
                   w-12 h-12 bg-white rounded-lg shadow-md border border-gray-200
                   flex items-center justify-center hover:scale-105 transition-all"
               >
@@ -82,7 +82,7 @@ const TrustedPartners = ({ items }: Props) => {
             {canScrollRight && (
               <button
                 onClick={() => scroll("right")}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-20 
+                className="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 z-20 
                   w-12 h-12 bg-white rounded-lg shadow-md border border-gray-200
                   flex items-center justify-center hover:scale-105 transition-all"
               >

@@ -80,11 +80,11 @@ export default function Home() {
 
           <TrustedPartners
             items={[
-              { title: "Netflix", image: "/netflix.png" },
+              { title: "Netflix", image: "/logos/netflix.png" },
               { title: "Amazon" },
-              { image: "/google.png" },
-              { title: "Spotify", image: "/spotify.png" },
-              { title: "Spotify", image: "/spotify.png" },
+              { image: "/logos/google.png" },
+              { title: "Spotify", image: "/logos/spotify.png" },
+              { title: "Spotify", image: "/logos/spotify.png" },
             ]}
           />
 
