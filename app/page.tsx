@@ -29,7 +29,7 @@ export default function Home() {
 
         {/* Single Card – Perfectly Centered */}
         <div className="max-w-xl mx-auto flex flex-col gap-10">
-        
+
 
         </div>
         <div className='mt-10 flex flex-col gap-10'>
@@ -78,13 +78,24 @@ export default function Home() {
             ]}
           />
 
-          <TrustedPartners />
+          <TrustedPartners
+            items={[
+              { title: "Netflix", image: "/netflix.png" },
+              { title: "Amazon" },
+              { image: "google.png" },
+              { title: "Spotify", image: " spotify.png" },
+              { title: "Spotify", image: " spotify.png" },
+            ]}
+          />
+
+
+
         </div>
         <div>
           <HowItWorksSection />
         </div>
         <div>
-           <TestimonialsSection />
+          <TestimonialsSection />
         </div>
       </main>
 
