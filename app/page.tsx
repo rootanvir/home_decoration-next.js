@@ -82,9 +82,9 @@ export default function Home() {
             items={[
               { title: "Netflix", image: "/netflix.png" },
               { title: "Amazon" },
-              { image: "google.png" },
-              { title: "Spotify", image: " spotify.png" },
-              { title: "Spotify", image: " spotify.png" },
+              { image: "/google.png" },
+              { title: "Spotify", image: "/spotify.png" },
+              { title: "Spotify", image: "/spotify.png" },
             ]}
           />
 
