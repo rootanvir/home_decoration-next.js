@@ -6,7 +6,7 @@ export default function AppPromoSection() {
   return (
     <section >
       <div  >
-        <div className='bg-white p-15 sm:p-5'>
+        <div className='bg-white lg:p-15 md:p-10 sm:p-5 p-5'>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-orange-200 via-orange-300 to-orange-500 shadow-2xl">
 
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
