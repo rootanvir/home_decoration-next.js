@@ -18,21 +18,17 @@ import TestimonialsSection from './components/section/TestimonialsSection';
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col">
-      {/* Main Content */}
-      <main className="flex-1 container mx-auto px-6 py-16">
 
+      {/* Main Content – Full Width */}
+      <main className="flex-1 w-full px-0 py-16">
 
-        <div>
-          <HotPropertiesSection />
-        </div>
+        <HotPropertiesSection />
 
+        {/* Centered block if needed */}
+        <div className="w-full flex flex-col gap-10"></div>
 
-        {/* Single Card – Perfectly Centered */}
-        <div className="max-w-xl mx-auto flex flex-col gap-10">
+        <div className="mt-10 flex flex-col gap-10 w-full">
 
-
-        </div>
-        <div className='mt-10 flex flex-col gap-10'>
           <WhyChooseSection
             title="Why Choose Our Properties"
             subtitle="Check video presentation to find out more about us."
@@ -88,18 +84,19 @@ export default function Home() {
             ]}
           />
 
-
-
         </div>
-        <div>
+
+        <div className="w-full">
           <HowItWorksSection />
         </div>
-        <div>
+
+        <div className="w-full">
           <TestimonialsSection />
         </div>
+
       </main>
 
-      {/* Footer – Sticks to bottom */}
+      {/* Footer – Full Width */}
       <Footer
         contactInfo={{
           email: 'yourmail@domain.com',
@@ -112,18 +109,17 @@ export default function Home() {
           { label: 'Contacts', href: '/contact' },
           { label: 'Help Center', href: '/help' },
           { label: 'Privacy Policy', href: '/privacy' },
-        ].map(link => ({ ...link }))}
-
-        socialLinks={[
-          { type: 'facebook' as const, href: 'https://facebook.com' },
-          { type: 'twitter' as const, href: 'https://x.com' },
-          { type: 'instagram' as const, href: 'https://instagram.com' },
-          { type: 'youtube' as const, href: 'https://youtube.com' },
-          { type: 'tiktok' as const, href: 'https://tiktok.com' },
         ]}
-
+        socialLinks={[
+          { type: 'facebook', href: 'https://facebook.com' },
+          { type: 'twitter', href: 'https://x.com' },
+          { type: 'instagram', href: 'https://instagram.com' },
+          { type: 'youtube', href: 'https://youtube.com' },
+          { type: 'tiktok', href: 'https://tiktok.com' },
+        ]}
         copyrightText="© RENSTATE 2025. ALL RIGHTS RESERVED."
       />
+
     </div>
   );
 }
