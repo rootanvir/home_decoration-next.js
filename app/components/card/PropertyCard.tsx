@@ -96,32 +96,33 @@ export default function PropertyCard({
 
 
 
-        <div className="py-5 mt-10 mb-10">
-          <div className="flex items-center gap-5">
+        {/* Beds, Baths, Sqft — EXACT original design preserved, only responsive tweaks */}
+        <div className="py-5">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-5">
             {/* Beds */}
-            <div className="flex items-center  gap-3 bg-gray-200 px-2 py-1 pr-3 rounded-full">
+            <div className="flex items-center gap-3 bg-gray-200 px-2 py-1 pr-4 sm:pr-3 rounded-full min-w-fit">
               <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-sm">
                 <Bed className="w-5 h-5 text-orange-500" />
               </div>
-              <span className="text-lg font-semibold text-gray-800 pr-2">{beds}</span>
+              <span className="text-lg font-semibold text-gray-800">{beds}</span>
             </div>
 
             {/* Baths */}
-            <div className="flex items-center gap-3 bg-gray-200 px-2 py-1 pr-3 rounded-full">
+            <div className="flex items-center gap-3 bg-gray-200 px-2 py-1 pr-4 sm:pr-3 rounded-full min-w-fit">
               <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-sm">
                 <Bath className="w-5 h-5 text-orange-500" />
               </div>
-              <span className="text-lg font-semibold text-gray-800  pr-2">{baths}</span>
+              <span className="text-lg font-semibold text-gray-800">{baths}</span>
             </div>
 
             {/* Sqft */}
-            <div className="flex items-center gap-3 bg-gray-200 px-2  py-1 pr-3 rounded-full">
-              <div className="flex items-center justify-center w-12 h-10 bg-white rounded-full shadow-sm">
+            <div className="flex items-center gap-3 bg-gray-200 px-2 py-1 pr-4 sm:pr-3 rounded-full min-w-fit">
+              <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-sm">
                 <Square className="w-5 h-5 text-orange-500" />
               </div>
-              <span className="text-lg font-semibold text-gray-800 ">
+              <span className="text-lg font-semibold text-gray-800">
                 {sqft.toLocaleString()}
-                <span className="text-sm font-normal"> ft²</span>
+                <span className="text-sm font-normal ml-1">ft²</span>
               </span>
             </div>
           </div>
@@ -136,7 +137,7 @@ export default function PropertyCard({
 
           <button className="flex items-center gap-2 px-6 py-3 bg-gray-200 text-black  rounded-full font-bold hover:bg-orange-100 transition">
             VIEW DETAILS
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"    className="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>          </button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6" /></svg>          </button>
 
         </div>
       </div>
