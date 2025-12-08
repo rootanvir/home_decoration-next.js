@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function AppPromoSection() {
   return (
-    <section className="py-12 md:py-20">
-      <div className="container mx-auto px-6">
+    <section >
+      <div  >
         <div className='bg-white p-15'>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-orange-200 via-orange-300 to-orange-500 shadow-2xl">
 

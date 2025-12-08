@@ -74,7 +74,7 @@ export default function WhyChooseSection({
                         </div>
 
                         {/* Testimonial — Your perfect translate + white border + custom corners */}
-                        <div className="absolute bottom-25 left-38 translate-y-1/2 translate-x-[-30%] lg:translate-x-[-55%] lg:translate-y-[32%] xl:translate-x-[-38%] xl:translate-y-[45%] ">
+                        <div className="absolute bottom-25 left-38   lg:translate-x-[-55%] lg:translate-y-[32%] xl:translate-x-[-38%] xl:translate-y-[45%] translate-x-[-67%]  translate-y-[28%] sm:translate-x-[-28%]  sm:translate-y-[50%] md:translate-x-[-22%]  md:translate-y-[50%]">
 
                             {/* White outer border (makes it float cleanly) */}
                             <div className="p-4 bg-white rounded-tr-4xl  ">
