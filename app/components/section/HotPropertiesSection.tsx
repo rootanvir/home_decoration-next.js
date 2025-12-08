@@ -12,20 +12,30 @@ export default function HotPropertiesSection() {
                     </h2>
 
                     {/* Filter Buttons - 4 equal columns on mobile, inline on desktop */}
-                    <div className="grid grid-cols-4 lg:flex bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-                        <button className="px-3 py-3 bg-gray-100 text-xs sm:text-sm font-semibold text-gray-700 hover:bg-gray-50 transition">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+
+                        <button className="cursor-pointer w-full px-2 py-2 sm:px-3 sm:py-3 bg-gray-100 
+                            text-sm sm:text-sm font-semibold text-gray-700 hover:bg-gray-50 transition">
                             ALL PROPERTIES
                         </button>
-                        <button className="px-3 py-3 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-50 transition border-l border-gray-200">
+
+                        <button className="cursor-pointer w-full px-2 py-2 sm:px-3 sm:py-3 
+                            text-sm sm:text-sm font-medium text-gray-700 hover:bg-gray-50 transition border-l border-gray-200">
                             SALE
                         </button>
-                        <button className="px-3 py-3 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-50 transition border-l border-gray-200">
+
+                        <button className="cursor-pointer w-full px-2 py-2 sm:px-3 sm:py-3 
+                            text-sm sm:text-sm font-medium text-gray-700 hover:bg-gray-50 transition border-l border-gray-200">
                             RENT
                         </button>
-                        <button className="px-3 py-3 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-50 transition border-l border-gray-200">
+
+                        <button className="cursor-pointer w-full px-2 py-2 sm:px-3 sm:py-3 
+                            text-sm sm:text-sm font-medium text-gray-700 hover:bg-gray-50 transition border-l border-t border-gray-100">
                             COMMERCIAL
                         </button>
+
                     </div>
+
                 </div>
 
                 {/* Properties Grid - 1 col mobile, 2 col tablet, 3 col desktop */}
