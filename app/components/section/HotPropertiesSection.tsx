@@ -1,36 +1,37 @@
-import { Heart, MessageCircle, Camera, Square } from "lucide-react";
-
-// Assuming you already have the PropertyCard component
 import PropertyCard from "../card/PropertyCard";
 
 export default function HotPropertiesSection() {
     return (
         <section className="py-12 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
-                    <h2 className="text-2xl font-bold text-gray-900">Browse Hot Properties</h2>
+                {/* Header + Filter Tabs */}
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-10">
+                    {/* Title */}
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 lg:mb-0">
+                        Browse Hot Properties
+                    </h2>
 
-                    <div className="flex bg-white mt-4 sm:mt-0 border p-2">
-                        <button className="px-4 py-2  bg-gray-100 border border-gray-200 rounded-l-lg text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    {/* Filter Buttons - Stacked on mobile, aligned right on desktop */}
+                    <div className="flex bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                        <button className="px-6 py-3 bg-gray-100 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition">
                             ALL PROPERTIES
                         </button>
-                        <button className="px-4 py-2 bg-white border-t border-b border-gray-300 text-sm font-medium text-gray-700">
+                        <button className="px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 transition border-l border-gray-200">
                             SALE
                         </button>
-                        <button className="px-4 py-2 bg-white border border-gray-300 text-sm font-medium text-gray-700">
+                        <button className="px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 transition border-l border-gray-200">
                             RENT
                         </button>
-                        <button className="px-4 py-2 bg-white border-t border-r border-b  border-gray-300 rounded-r-lg text-sm font-medium text-gray-700">
+                        <button className="px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 transition border-l border-gray-200">
                             COMMERCIAL
                         </button>
                     </div>
                 </div>
 
-                {/* Properties Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {/* Card 1 - Gorgeous House For Sale */}
-                    <div className="relative group">
+                {/* Properties Grid - Fully Responsive */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    {/* Property 1 */}
+                    <div className="group">
                         <PropertyCard
                             imageUrl="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2070&auto=format&fit=crop"
                             title="Gorgeous House For Sale"
@@ -44,44 +45,43 @@ export default function HotPropertiesSection() {
                             authorAvatar="https://i.pravatar.cc/150?img=11"
                             isForSale={true}
                         />
-
                     </div>
 
-                    {/* Card 2 - Placeholder / Coming Soon */}
-                    <div className="relative group">
+                    {/* Property 2 */}
+                    <div className="group">
                         <PropertyCard
-                            imageUrl="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2070&auto=format&fit=crop"
-                            title="Gorgeous House For Sale"
-                            price={500000}
-                            address="40 Journal Square, NJ, USA"
-                            beds={2}
+                            imageUrl="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+                            title="Modern Apartment Downtown"
+                            price={720000}
+                            address="123 Main St, Manhattan, NY"
+                            beds={3}
                             baths={2}
-                            sqft={150}
-                            photosCount={13}
-                            authorName="John Doe"
-                            authorAvatar="https://i.pravatar.cc/150?img=11"
+                            sqft={210}
+                            photosCount={18}
+                            authorName="Sarah Lee"
+                            authorAvatar="https://i.pravatar.cc/150?img=5"
                             isForSale={true}
                         />
-
                     </div>
 
-                    {/* Card 3 - Luxury Family Home */}
-                    <div className="relative group">
+                    {/* Property 3 */}
+                    <div className="group">
                         <PropertyCard
                             imageUrl="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070&auto=format&fit=crop"
                             title="Luxury Family Home"
                             price={450000}
                             address="W 85th St, New York, USA"
-                            beds={2}
-                            baths={1}
-                            sqft={150}
+                            beds={4}
+                            baths={3}
+                            sqft={280}
                             photosCount={7}
                             authorName="Emma Wilson"
                             authorAvatar="https://i.pravatar.cc/150?img=8"
                             isForSale={true}
                         />
-
                     </div>
+
+                    {/* Add more cards as needed - layout stays perfect */}
                 </div>
             </div>
         </section>
