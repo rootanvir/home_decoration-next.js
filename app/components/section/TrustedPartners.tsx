@@ -139,5 +139,5 @@ const TrustedPartners = ({ items }: Props) => {
     </section>
   );
 };
-
+//redeploy
 export default TrustedPartners;
