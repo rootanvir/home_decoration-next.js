@@ -14,6 +14,7 @@ import TrustedPartners from './components/section/TrustedPartners';
 import HotPropertiesSection from './components/section/HotPropertiesSection';
 import HowItWorksSection from './components/section/HowItWorksSection';
 import TestimonialsSection from './components/section/TestimonialsSection';
+import TrustedPartnersStatic from './components/section/TrustedPartnersStatic';
 
 export default function Home() {
   return (
@@ -75,6 +76,16 @@ export default function Home() {
           />
 
           <TrustedPartners
+            items={[
+              { title: "Netflix", image: "/logos/netflix.png" },
+              { title: "Amazon" },
+              { image: "/logos/google.png" },
+              { title: "Spotify", image: "/logos/spotify.png" },
+              { title: "Spotify", image: "/logos/spotify.png" },
+            ]}
+          />
+          
+          <TrustedPartnersStatic
             items={[
               { title: "Netflix", image: "/logos/netflix.png" },
               { title: "Amazon" },
