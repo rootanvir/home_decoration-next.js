@@ -81,7 +81,7 @@ export default function Home() {
               { title: "Amazon" },
               { image: "/logos/google.png" },
               { title: "Spotify", image: "/logos/spotify.png" },
-              { title: "Spotify", image: "/logos/spotify.png" },
+              {  image: "/logos/microsoft.png" },
             ]}
           />
           
